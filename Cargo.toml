@@ -46,6 +46,7 @@ html-escape = "0.2.11"
 regex = "1.7.0"
 # apache-avro = { path = "/Users/moboudra/dev/avro/lang/rust/avro"}
 apache-avro = { git = "https://github.com/boudra/avro", branch = "master"}
+clap = { version = "4.3.0", features = ["derive"] }
 # dhat = "0.3.2"
 
 [build-dependencies]

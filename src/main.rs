@@ -1,4 +1,4 @@
-use konbert::{avro, csv, html, json, sql, xml, Error, ReaderOptions, WriterOptions};
+use kon::{avro, csv, html, json, sql, xml, Error, ReaderOptions, WriterOptions};
 
 use serde_json::json;
 use std::fs::File;
@@ -9,7 +9,7 @@ fn convert() -> Result<(), Error> {
     let args: Vec<String> = std::env::args().collect();
 
     let input_options: ReaderOptions = serde_json::from_str(&args[2])?;
-    let reader = konbert::reader::new_reader(&args[1], input_options)?;
+    let reader = kon::reader::new_reader(&args[1], input_options)?;
 
     let output_file = File::create(&args[3])?;
     let writer = BufWriter::new(output_file);
