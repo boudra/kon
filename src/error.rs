@@ -6,8 +6,6 @@ pub type Result<T> = std::result::Result<T, Error>;
 
 #[derive(Error, Debug)]
 pub enum Error {
-    #[error("DuckDB Error: {0}")]
-    DuckDbError(String),
     #[error("{0}")]
     CustomError(String),
     #[error("{0}")]

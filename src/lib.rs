@@ -18,9 +18,6 @@ pub mod sql;
 pub mod util;
 pub mod xml;
 
-#[cfg(feature = "duckdb")]
-pub mod duckdb;
-
 pub use crate::erlang::ReaderOptions;
 pub use crate::erlang::WriterOptions;
 pub use crate::error::Error;

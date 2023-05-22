@@ -14,7 +14,6 @@ name = "kon"
 path = "src/main.rs"
 
 [features]
-duckdb = []
 dhat-heap = []    # if you are doing heap profiling
 dhat-ad-hoc = []  # if you are doing ad hoc profiling
 
