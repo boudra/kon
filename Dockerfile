@@ -8,7 +8,7 @@ COPY ./src ./src
 RUN cargo build --release
 RUN cargo test --release
 
-FROM debian
+FROM debian:bullseye-slim
 
 COPY --from=builder /usr/src/kon/target/release/kon ./
 
