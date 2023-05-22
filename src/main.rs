@@ -8,6 +8,12 @@ use std::io::BufWriter;
 fn convert() -> Result<(), Error> {
     let args: Vec<String> = std::env::args().collect();
 
+    if args.len() != 5 {
+        return Err(Error::CustomError(
+            "invalid number of arguments".to_string(),
+        ));
+    }
+
     let input_options: ReaderOptions = serde_json::from_str(&args[2])?;
     let reader = kon::reader::new_reader(&args[1], input_options)?;
 

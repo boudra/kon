@@ -7,15 +7,11 @@ edition = "2021"
 [lib]
 name = "kon"
 path = "src/lib.rs"
-crate-type = ["rlib", "cdylib"]
+crate-type = ["rlib"]
 
 [[bin]]
 name = "kon"
 path = "src/main.rs"
-
-[features]
-dhat-heap = []    # if you are doing heap profiling
-dhat-ad-hoc = []  # if you are doing ad hoc profiling
 
 [dependencies]
 rayon = "1.5.3"
