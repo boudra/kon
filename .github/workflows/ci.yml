@@ -32,7 +32,8 @@ jobs:
         with:
           context: ./
           push: ${{ github.ref == 'refs/heads/main' }}
-          tags: ghcr.io/boudra/kon:latest
+          tags: ghcr.io/boudra/kon:latest,ghcr.io/boudra/kon:${{ github.sha }}
+
           builder: ${{ steps.buildx.outputs.name }}
           cache-from: type=registry,ref=ghcr.io/boudra/kon:cache
           cache-to: type=registry,ref=ghcr.io/boudra/kon:cache,mode=max
