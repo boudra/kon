@@ -10,8 +10,8 @@ RUN cargo test --release
 
 FROM debian:bullseye-slim
 
-COPY --from=builder /usr/src/kon/target/release/kon ./
+COPY --from=builder /usr/src/kon/target/release/kon /usr/local/bin/kon
 
 USER 1000
 
-CMD ["./kon"]
+CMD ["/usr/local/bin/kon"]

@@ -137,5 +137,7 @@ fn invalid_data(msg: &str) -> Error {
 fn deserialize_single<'de, T: Deserialize<'de>>(reader: &mut &'de [u8]) -> Result<T> {
     let mut de = serde_json::Deserializer::from_reader(reader);
 
+    de.disable_recursion_limit();
+
     T::deserialize(&mut de).map_err(|e| Error::CustomError(format!("{}", e)))
 }

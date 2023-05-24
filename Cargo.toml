@@ -29,7 +29,7 @@ chardetng = "0.1.17"
 serde_with = "2.0.1"
 serde-tuple-vec-map = "1.0.1"
 serde = "1.0.145"
-serde_json = {version = "1.0", features = ["raw_value"]}
+serde_json = {version = "1.0", features = ["raw_value", "unbounded_depth"]}
 pipe = "0.4.0"
 memmap2 = "0.5.7"
 futures = "0.3.24"
